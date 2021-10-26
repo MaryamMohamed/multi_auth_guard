@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4" style="margin-top: 45px;">
-                  <h4>User Login</h4><hr>
-                  <form action="{{ route('user.check') }}" method="post" autocomplete="off">
+                  <h4>Admin Login</h4><hr>
+                  <form action="{{ route('admin.check') }}" method="post" autocomplete="off">
                     @if (Session::get('fail'))
                         <div class="alert alert-danger">
                             {{ Session::get('fail') }}
@@ -26,14 +26,6 @@
                       <div class="form-group">
                           <button type="submit" class="btn btn-primary">Login</button>
                       </div>
-                      <a href="{{ url('user/auth/google') }}" class="btn btn-success">
-                        <strong>Login With Google</strong>
-                      </a> 
-                      <a href="{{ url('user/auth/facebook') }}" class="btn btn-success">
-                        <strong>Login With Facebook</strong>
-                      </a> 
-                      <br>
-                      <a href="{{ route('user.register') }}">Create new Account</a>
                       
                   </form>
             </div>
